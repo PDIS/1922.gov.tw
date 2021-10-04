@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- App favicon  Version:20210919004-->
-<link rel="shortcut icon" href="https://static.1922.gov.tw/images/favicon.ico">
+<link rel="shortcut icon" href="./images/favicon.ico">
 <style>
 a[id="gotoContent"] {
 	position: absolute;
@@ -54,20 +53,20 @@ a[id="gotoContent"]:active, a[id="gotoContent"]:focus {
 	};
 </script>
 <title>COVID-19 公費疫苗預約平台</title>
-<base href="https://1922.gov.tw">
+
 <meta name="Accessible_website" content="本網站通過 A/AA/AAA 檢測等級無障礙網頁檢測">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <meta name="description" content="COVID-19 公費疫苗預約平台">
 <meta name="keywords" content="COVID-19 公費疫苗預約平台">
 <meta name="author" content="COVID-19 公費疫苗預約平台">
-<link href="https://static.1922.gov.tw/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
-<link href="https://static.1922.gov.tw/assets/css/icons.css" rel="stylesheet" type="text/css" />
-<link href="https://static.1922.gov.tw/assets/css/app.css" rel="stylesheet" type="text/css" />
+<link href="./assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="./assets/css/icons.css" rel="stylesheet" type="text/css" />
+<link href="./assets/css/app.css" rel="stylesheet" type="text/css" />
 
-<link href="https://static.1922.gov.tw/js/pace/pace-custom.css" media="all" rel="stylesheet"
+<link href="./js/pace/pace-custom.css" media="all" rel="stylesheet"
 	type="text/css" />
-<script src="https://static.1922.gov.tw/js/jquery/jquery.min.js"></script>
+<script src="./js/jquery/jquery.min.js"></script>
 </head>
 
 <body>
@@ -89,14 +88,14 @@ a[id="gotoContent"]:active, a[id="gotoContent"]:focus {
 					<a href="" class="logo text-center"
 						tabindex="1" title="COVID-19 公費疫苗預約平台Logo">
 						<div class="d-none d-lg-inline-block mt-3">
-							<img src="https://static.1922.gov.tw/images/logo-light.png" alt="LOGO" height="60"
+							<img src="./images/logo-light.png" alt="LOGO" height="60"
 								title="COVID-19 公費疫苗預約平台"> <span
 								class="logo-lg-text-light" id="headerLogoWord">COVID-19 公費疫苗預約平台<br/>
 							
 							</span>
 						</div>
 						<div class="d-block d-lg-none mt-2">
-							<img src="https://static.1922.gov.tw/images/logo-light.png" alt="LOGO" height="60"
+							<img src="./images/logo-light.png" alt="LOGO" height="60"
 								title="COVID-19 公費疫苗預約平台">
 						</div>
 					</a>
@@ -116,19 +115,17 @@ a[id="gotoContent"]:active, a[id="gotoContent"]:focus {
 	<div class="content-page">
 		<div class="container" id="indexDiv">
 			<div class="pro-box">
-				<h2 class="title-con style-line2"><span id="time-remaining">
-<noscript>
-系統作業中，已自動排隊，請稍候
-          {{#waitTimeKnown}}…{{/waitTimeKnown}}
-          {{^waitTimeKnown}}{{#queueIsFull}}……{{/queueIsFull}}
-          {{^queueIsFull}}。{{/queueIsFull}}{{/waitTimeKnown}}
+				<h2 class="title-con style-line2 d-block d-sm-none"
+					style="margin-bottom: 0;">
+					<span>公費疫苗</span><br />
 
-</noscript>
-</span></h2>
-<p class="title-sm" id="en-1">請先備妥健保卡及讀卡機。</p>
-<p><strong>
-                  （<span id="en-2">本頁面會自動更新。前次更新時間：</span><span id="last-updated"></span>）
-</strong></p>				
+				</h2>
+				<h1 class="title-con style-line2 d-none d-sm-block">
+					<span >COVID-19 公費疫苗預約登記</span>
+				</h1>
+				<h1 class="title-con d-none d-sm-block">
+					<span style="font-size: 0.8em;" >COVID-19 Vaccination Registration and Reservation</span>
+				</h1>				
 				<p class="title-sm text-danger" style="text-align:left">
 
 				</p>
@@ -154,17 +151,17 @@ a[id="gotoContent"]:active, a[id="gotoContent"]:focus {
 									</span><br>		
 								</p>	
 								<button type="button" class="btn btn-lg text-dark centralBtn" 
-									title="請稍候" onclick="tryToVas();"
+									title="進入中文版" onclick="tryToVas();"
 									code="1">
 									<h2 class="display-6 font-weight-bolder"style="line-height: 10px">
-										<br/>請稍候
+										<br/>進入中文版
 									</h2>
 								</button>
 								&nbsp;&nbsp;
 								<button type="button" class="btn btn-lg text-dark centralBtn " 
-									 title="Please wait"  >
+									 title="Start(EN)" onclick="tryToVasEn();" >
 									 <h2 class="display-5 font-weight-bolder"style="line-height: 10px">
-										<br/>Please wait
+										<br/>Start(EN)
 									</h2>
 								</button>									
 							</div>
@@ -184,17 +181,17 @@ a[id="gotoContent"]:active, a[id="gotoContent"]:focus {
 									</span><br>		
 								</p>						
 								<button type="button" class="btn btn-lg text-dark centralBtn"
-									title="請稍候" 
+									title="進入中文版" onclick="tryToVab();"
 									code="1">
 									<h2 class="display-6 font-weight-bolder" style="line-height: 10px">
-										<br/>請稍候
+										<br/>進入中文版
 									</h2>
 								</button>
 								&nbsp;&nbsp;
 								<button type="button" class="btn btn-lg text-dark centralBtn"
-									 title="Please wait"  >
+									 title="Start(EN)" onclick="tryToVabEn();" >
 									 <h2 class="display-5 font-weight-bolder" style="line-height: 10px">
-										<br/>Please wait 
+										<br/>Start(EN)
 									</h2>
 								</button>	
 							</div>
@@ -215,12 +212,29 @@ a[id="gotoContent"]:active, a[id="gotoContent"]:focus {
 	<!-- End Page content -->
 	<!-- ============================================================== -->
 <footer class="footer">
-
+	<a href="javascript:void(0)" id="Accesskey_Z" accesskey="Z"
+	title="下方選單連結區，此區塊列有[使用說明]、[政府網站資料開放宣告]、[資訊安全政策]、[隱私權公告]等連結"
+	class="key-text" style="color: #fff; font-size: 1.25em;">:::</a>
 <div class="foot-btm">
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-md-12">
-				<div class="info pb-3"><br>
+				<ul class="f-link">
+					<li><a style="cursor: pointer;" href="javascript:void(0);"
+						onclick="window.open('info4.html', '資訊安全政策', config='height=600,width=450,scrollbars=yes')"
+						title="[另開新視窗]資訊安全政策"
+						alt="資訊安全政策">資訊安全政策&nbsp;Information Security</a>
+					</li>
+					<li><a style="cursor: pointer;" href="javascript:void(0);"
+						onclick="window.open('info5.html', '隱私權公告', config='height=600,width=450,scrollbars=yes')"
+						title="[另開新視窗]隱私權公告"
+						alt="隱私權公告">隱私權公告&nbsp;Policy Privacy notice</a>
+					</li>				
+				</ul>				
+				 
+
+
+				<div class="info pb-3">
 					<p>Copyright © 2021 疫苗預約系統</p>
 					<p>Copyright © 2021 COVID-19 Vaccination Registration and Appointment Reservation Platform</p>
 					
@@ -233,37 +247,130 @@ a[id="gotoContent"]:active, a[id="gotoContent"]:focus {
 </div>
 </footer>
 </body>
-<script type="text/javascript" language="javascript" class="init">
-      var remainingEl = document.getElementById('time-remaining');
-      var waitTime = {{waitTime}};
-      var waitTimeKnown = {{waitTimeKnown}};
-      var queueIsFull = {{queueIsFull}};
-      var isEnglish = /en/.test(navigator.language);
+<script type="text/javascript">
 
-      var remainingString = (isEnglish ? 'Please wait' : '系統作業中，已自動排隊，請稍候');
 
-      if (!waitTimeKnown) {
-        remainingString += (queueIsFull ? '……' : '。');
-      } else {
-        if (waitTime <= 14) {
-          remainingString += '（' + waitTime + (isEnglish ? ( (waitTime === 1) ? ' minute）…' : ' minutes）…' ) : ' 分鐘）…');
-        } else {
-          remainingString += '…';
-        }
-      }
 
-      remainingEl.innerText = remainingString;
 
-      var date = new Date();
-      document.getElementById(
-        'last-updated'
-      ).innerText = date.toLocaleTimeString();
+	// async function fetchWithTimeout(resource, options = {}) {
+	//   const { timeout = 8000 } = options;
+	  
+	//   const controller = new AbortController();
+	//   const id = setTimeout(() => controller.abort(), timeout);
 
-if (isEnglish) {
-      document.getElementById('ch-only-1').innerText = '';
-      document.getElementById('ch-only-2').innerText = '';
-      document.getElementById('en-1').innerText = 'Please prepare NHI card and card reader, or install the NHI Mobile App.';
-      document.getElementById('en-2').innerText = 'This page will refreesh automatically. Last update:\xA0';
-}
-    </script>
+	//   const response = await fetch(resource, {
+	// 	...options,
+	// 	signal: controller.signal  
+	//   });
+	//   clearTimeout(id);
+
+	//   return response;
+	  
+	// }
+	
+
+
+
+
+
+	function tryToVas() {
+		var bodystr = "{\"id\":\"checkService.do\",\"certTp\":\"3\"}";
+			$.ajax({
+				url: './vas/checkService.do',
+				method: 'POST',
+				data: bodystr,
+				dataType: "json",
+				timeout: 30000,
+				success: function(response) {
+					if(response.code === 0){
+						var vasUrl = "./vas?language=ch";
+						window.location = vasUrl;
+					}else{
+					
+						alert(response.message);
+						
+					}
+				},
+				error: function (thrownError) {
+
+				}
+			});
+	};
+	
+	function tryToVab(){
+	
+		var bodystr = "{\"id\":\"checkService.do\",\"certTp\":\"3\"}";
+		$.ajax({
+				url: './vab/checkService.do',
+				method: 'POST',
+				data: bodystr,
+				dataType: "json",
+				timeout: 30000,
+				success: function(response) {
+					if(response.code === 0){
+						var vabUrl = "./vab?language=ch";
+						window.location = vabUrl;
+					}else{					
+						alert(response.message);
+									
+					}
+				},
+				error: function (thrownError) {
+					
+				}
+			});
+	}
+
+
+	function tryToVasEn() {
+		var bodystr = "{\"id\":\"checkService.do\",\"certTp\":\"3\"}";
+			$.ajax({
+				url: './vas/checkService.do',
+				method: 'POST',
+				data: bodystr,
+				dataType: "json",
+				timeout: 10000,
+				success: function(response) {
+					if(response.code === 0){
+						var vasUrl = "./vas?language=en";
+						window.location = vasUrl;
+					}else{
+					
+						alert(response.message);
+						
+					}
+				},
+				error: function (thrownError) {
+					
+				}
+			});
+	};
+	
+	function tryToVabEn(){
+	
+		var bodystr = "{\"id\":\"checkService.do\",\"certTp\":\"3\"}";
+		$.ajax({
+				url: './vab/checkService.do',
+				method: 'POST',
+				data: bodystr,
+				dataType: "json",
+				timeout: 30000,
+				success: function(response) {
+					// TODO: 判斷結果並轉導
+					if(response.code === 0){
+						var vabUrl = "./vab?language=en";
+						window.location = vabUrl;
+					}else{					
+						alert(response.message);				
+					}
+				},
+				error: function (thrownError) {
+					
+				}
+			});
+	}
+
+
+
+</script>
 </html>
