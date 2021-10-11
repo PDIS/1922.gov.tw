@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="refresh" content="60">
 <!-- App favicon  Version:20210919004-->
 <link rel="shortcut icon" href="https://static.1922.gov.tw/images/favicon.ico">
 <style>
@@ -119,9 +119,9 @@ a[id="gotoContent"]:active, a[id="gotoContent"]:focus {
 				<h2 class="title-con style-line2"><span id="time-remaining">
 <noscript>
 系統作業中，已自動排隊，請稍候
-          {{#waitTimeKnown}}…{{/waitTimeKnown}}
-          {{^waitTimeKnown}}{{#queueIsFull}}……{{/queueIsFull}}
-          {{^queueIsFull}}。{{/queueIsFull}}{{/waitTimeKnown}}
+          
+          ……
+          
 
 </noscript>
 </span></h2>
@@ -135,67 +135,34 @@ a[id="gotoContent"]:active, a[id="gotoContent"]:focus {
 					
 				<p class="title-sm text-danger" style="text-align:left">
 					</p>
-				<div class="d-flex justify-content-center row align-items-center">
-					<div class="col-12 col-lg-6 card-item">
-						<a href="javascript:void(0)" id="Accesskey_C1" accesskey="C"
-							title="中間主要內容區，此區塊呈現網頁的網頁內容" tabindex="3" class="key dotted"
-							style="float: left; color: #2F6FA7; font-size: 1.25em; margin-top: 5px; margin-right: 4px;">:::</a>
-						<div class="card">
-							<div class="card-header b-blue">
-								<p class="card-title"><h1 class="display-5 font-weight-bolder">意願登記 Register</h1></p>
-								<span style="color: #DB0000">可選擇或修改想施打的疫苗種類<br/></span>
-								<span style="color: #DB0000">You can choose or modify your vaccine preference.<br/></span>
-								<span style="color: #DB0000"><br/></span>
-							</div>							
-							<div class="card-body b-blue">
-								<p class="text-white d-none d-sm-block">
-									<span>
-										&nbsp;<br>&nbsp;
-									</span><br>		
-								</p>	
-								<button type="button" class="btn btn-lg text-dark centralBtn" 
-									title="請稍候" onclick="tryToVas();"
-									code="1">
-									<h2 class="display-6 font-weight-bolder"style="line-height: 10px">
-										<br/>請稍候
-									</h2>
-								</button>
-								&nbsp;&nbsp;
-								<button type="button" class="btn btn-lg text-dark centralBtn " 
-									 title="Please wait"  >
-									 <h2 class="display-5 font-weight-bolder"style="line-height: 10px">
-										<br/>Please wait
-									</h2>
-								</button>									
-							</div>
-						</div>
-					</div>
-					<div class="col-12 col-lg-6 card-item">
+				
+				<a href="javascript:void(0)" id="Accesskey_C1" accesskey="C"
+					title="中間主要內容區，此區塊呈現網頁的網頁內容" tabindex="3"
+					class="key dotted"
+					style="float: left; color: #2F6FA7; font-size: 1.25em; margin-top: 5px;">:::</a>
+				<div class="row">				    <div class="col-12  col-lg-4 card-item card-deck"></div>
+				    <div class="col-12  col-lg-4 card-item  card-deck">
 						<div class="card">
 							<div class="card-header b-yellow" style="">
-								<p class="card-title"><h1 class="display-5 font-weight-bolder">預約接種 Book Vaccination</h1></p>	
+								<p class="card-title">預約接種 Book Vaccination</p>	
+								<br/>
 								<span style="color: #DB0000">已完成意願登記且符合預約資格者，可選擇疫苗施打地點及時段<br/></span>
-								<span style="color: #DB0000"> If you have registered and are qualified for the appointment, you can choose the location and time of the vaccination.<br/></span>
+							<span style="color: #DB0000"> If you have registered and are qualified for the appointment, you can choose the location and time of the vaccination.</span>
 							</div>
 							<div class="card-body b-yellow">
-								<p class="text-white d-none d-sm-block">
-									<span>
-										&nbsp;<br>&nbsp;
-									</span><br>		
-								</p>						
-								<button type="button" class="btn btn-lg text-dark centralBtn"
+								<br/>					
+								<button type="button" class="btn-lg text-dark centralBtn"
 									title="請稍候" 
 									code="1">
-									<h2 class="display-6 font-weight-bolder" style="line-height: 10px">
-										<br/>請稍候
-									</h2>
+									<sapn class="display-6 font-weight-bolder" >
+										請稍候
+									</sapn>
 								</button>
-								&nbsp;&nbsp;
-								<button type="button" class="btn btn-lg text-dark centralBtn"
-									 title="Please wait"  >
-									 <h2 class="display-5 font-weight-bolder" style="line-height: 10px">
-										<br/>Please wait 
-									</h2>
+								<button type="button" class="btn-lg text-dark centralBtn"
+									 title="Please wait" >
+									 <sapn class="display-5 font-weight-bolder" >
+										Please wait
+									</sapn>
 								</button>	
 							</div>
 						</div>
@@ -235,9 +202,9 @@ a[id="gotoContent"]:active, a[id="gotoContent"]:focus {
 </body>
 <script type="text/javascript" language="javascript" class="init">
       var remainingEl = document.getElementById('time-remaining');
-      var waitTime = {{waitTime}};
-      var waitTimeKnown = {{waitTimeKnown}};
-      var queueIsFull = {{queueIsFull}};
+      var waitTime = 0;
+      var waitTimeKnown = false;
+      var queueIsFull = true;
       var isEnglish = /en/.test(navigator.language);
 
       var remainingString = (isEnglish ? 'Please wait' : '系統作業中，已自動排隊，請稍候');
