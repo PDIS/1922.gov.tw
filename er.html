@@ -118,11 +118,7 @@ a[id="gotoContent"]:active, a[id="gotoContent"]:focus {
 			<div class="pro-box">
 				<h2 class="title-con style-line2"><span id="time-remaining">
 <noscript>
-系統作業中，已自動排隊，請稍候
-          
-          ……
-          
-
+您已進入 COVID-19 公費疫苗預約平台，已自動排隊，請稍候……
 </noscript>
 </span></h2>
 <p class="title-sm" id="en-1">請先備妥健保卡，以及健保卡所載之身分證號/統一證號。</p>
@@ -210,7 +206,7 @@ a[id="gotoContent"]:active, a[id="gotoContent"]:focus {
       var queueIsFull = true;
       var isEnglish = /en/.test(navigator.language);
 
-      var remainingString = (isEnglish ? 'Please wait' : '系統作業中，已自動排隊，請稍候');
+      var remainingString = (isEnglish ? 'Please wait' : '您已進入 COVID-19 公費疫苗預約平台，已自動排隊，請稍候');
 
       if (!waitTimeKnown) {
         remainingString += (queueIsFull ? '……' : '。');
