@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- App favicon  Version:20210919004-->
+<link rel="shortcut icon" href="https://static.1922.gov.tw/images/favicon.ico">
+<style>
+a[id="gotoContent"] {
+	position: absolute;
+	overflow: visible;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+	color: #000;
+	float: left;
+}
+
+a[id="gotoContent"]:active, a[id="gotoContent"]:focus {
+	position: static;
+	width: auto;
+	overflow: visible;
+	clip: auto;
+	margin: 5px;
+	float: left;
+}
+
+.centralBtn {
+	color: #000 !important;
+	background-color: #FFF !important;
+	border: none !important;
+	font-size: 1.4rem !important;
+	margin-bottom: 20px;
+}
+
+.centralBtn:focus {
+	outline: 3px dashed #FFFDF0 !important;
+	outline-offset: 4px !important;
+	border: none !important;
+	background-color: #FCFCFC !important;
+}
+</style>
+<script>
+
+
+
+
+	var pageNum = 1;
+	var firstTimePage2 = true;
+	var firstTimePage3 = true;
+	paceOptions = {
+		ajax : true,
+		elements : true
+	};
+</script>
+<title>COVID-19 公費疫苗預約平台</title>
+<base href="https://1922.gov.tw">
+<meta name="Accessible_website" content="本網站通過 A/AA/AAA 檢測等級無障礙網頁檢測">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="description" content="COVID-19 公費疫苗預約平台">
+<meta name="keywords" content="COVID-19 公費疫苗預約平台">
+<meta name="author" content="COVID-19 公費疫苗預約平台">
+<link href="https://static.1922.gov.tw/assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<link href="https://static.1922.gov.tw/assets/css/app.css" rel="stylesheet" type="text/css" />
+
+<link href="https://static.1922.gov.tw/js/pace/pace-custom.css" media="all" rel="stylesheet"
+	type="text/css" />
+<script src="https://static.1922.gov.tw/js/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+	<noscript>您的瀏覽器似乎不支援 JavaScript 語法，但沒關係，這並不會影響到內容的陳述。
+		如需要選擇適合您的字級大小，可利用鍵盤 Ctrl + (+)放大 (-)縮小。 如需要回到上一頁，可使用瀏覽器提供的 Alt +
+		左方向鍵(←)。 如需要列印，可利用鍵盤 Ctrl + p 使用瀏覽器提供的列印功能。</noscript>
+	<!-- Navigation Bar-->
+
+	<header id="topnav">
+		<!-- Topbar Start -->
+		<div class="navbar-custom">
+			<a href="javascript:void(0)"
+				onclick="document.getElementById('Accesskey_C' + pageNum ).focus();window.scrollTo(0, 0);"
+				id="gotoContent" title="跳到主要內容" tabindex="1" class="key"
+				style="color: #f0f8ff;">跳到主要內容 </a>
+			<div class="container-fluid">
+				<!-- LOGO -->
+				<div class="logo-box">
+					<a href="" class="logo text-center"
+						tabindex="1" title="COVID-19 公費疫苗預約平台Logo">
+						<div class="d-none d-lg-inline-block mt-3">
+							<img src="https://static.1922.gov.tw/images/logo-light.png" alt="LOGO" height="60"
+								title="COVID-19 公費疫苗預約平台"> <span
+								class="logo-lg-text-light" id="headerLogoWord">COVID-19 公費疫苗預約平台<br/>
+							
+							</span>
+						</div>
+						<div class="d-block d-lg-none mt-2">
+							<img src="https://static.1922.gov.tw/images/logo-light.png" alt="LOGO" height="60"
+								title="COVID-19 公費疫苗預約平台">
+						</div>
+					</a>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<!-- end Topbar -->
+	</header>
+
+	<!-- End Navigation Bar-->
+	<!-- ============================================================== -->
+	<!-- Start Page Content here -->
+	<!-- ============================================================== -->
+<div class="wrapper">
+
+	<div class="content-page">
+		<div class="container" id="indexDiv">
+			<div class="pro-box">
+				<h2 class="title-con style-line2"><span id="time-remaining">
+<noscript>
+您已進入COVID-19公費疫苗預約平台，自動排隊中，請耐心等候，無需再按F5重新整理，避免重新排隊影響權益!
+          {{#waitTimeKnown}}…{{/waitTimeKnown}}
+          {{^waitTimeKnown}}{{#queueIsFull}}……{{/queueIsFull}}
+          {{^queueIsFull}}。{{/queueIsFull}}{{/waitTimeKnown}}
+
+</noscript>
+</span></h2>
+<p class="title-sm" id="en-1">請先備妥健保卡，以及健保卡所載之身分證號/統一證號。</p>
+<p><strong>
+                  （<span id="en-2">本頁面會自動更新。前次更新時間：</span><span id="last-updated"></span>）
+</strong></p>				
+				<p class="title-sm text-danger" style="text-align:left">
+
+				</p>
+					
+				<p class="title-sm text-danger" style="text-align:left">
+					</p>
+				
+				<a href="javascript:void(0)" id="Accesskey_C1" accesskey="C"
+					title="中間主要內容區，此區塊呈現網頁的網頁內容" tabindex="3"
+					class="key dotted"
+					style="float: left; color: #2F6FA7; font-size: 1.25em; margin-top: 5px;">:::</a>
+				<div class="row">				    <div class="col-12  col-lg-4 card-item card-deck"></div>
+				    <div class="col-12  col-lg-4 card-item  card-deck">
+						<div class="card">
+							<div class="card-header b-yellow" style="">
+								<p class="card-title">預約接種 Book Vaccination</p>	
+								<br/>
+								<span style="color: #DB0000">已完成意願登記且符合預約資格者，可選擇疫苗施打地點及時段<br/></span>
+							<span style="color: #DB0000"> If you have registered and are qualified for the appointment, you can choose the location and time of the vaccination.</span>
+							</div>
+							<div class="card-body b-yellow">
+								<br/>					
+								<button type="button" class="btn-lg text-dark centralBtn"
+									title="請稍候" 
+									code="1">
+									<sapn class="display-6 font-weight-bolder" >
+										請稍候
+									</sapn>
+								</button>
+								<button type="button" class="btn-lg text-dark centralBtn"
+									 title="Please wait" >
+									 <sapn class="display-5 font-weight-bolder" >
+										Please wait
+									</sapn>
+								</button>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--登入資訊 -->
+		
+		<!--系統檢查-->
+		<div id="modalLoading" class="loader loader-default"
+			data-text="環境設定檢測約需5-10秒，請稍待片刻...."></div>
+	</div>
+</div>
+
+	<!-- ============================================================== -->
+	<!-- End Page content -->
+	<!-- ============================================================== -->
+<footer class="footer">
+
+<div class="foot-btm">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-md-12">
+				<div class="info pb-3"><br>
+					<p>Copyright © 2021 疫苗預約系統</p>
+					<p>Copyright © 2021 COVID-19 Vaccination Registration and Appointment Reservation Platform</p>
+					
+				</div>
+
+
+			</div>
+		</div>
+	</div>
+</div>
+</footer>
+</body>
+<script type="text/javascript" language="javascript" class="init">
+      var remainingEl = document.getElementById('time-remaining');
+      var waitTime = {{waitTime}};
+      var waitTimeKnown = {{waitTimeKnown}};
+      var queueIsFull = {{queueIsFull}};
+      var isEnglish = /en/.test(navigator.language);
+
+      var remainingString = (isEnglish ? 'Please wait' : '您已進入 COVID-19 公費疫苗預約平台，自動排隊中，無需再按 F5 重新整理，避免重新排隊影響權益');
+
+      if (!waitTimeKnown) {
+        remainingString += (queueIsFull ? '……' : '。');
+      } else {
+        if (waitTime <= 14) {
+          remainingString += '（等候約 ' + waitTime + (isEnglish ? ( (waitTime === 1) ? ' minute）…' : ' minutes）…' ) : ' 分鐘左右）…');
+        } else {
+          remainingString += '…';
+        }
+      }
+
+      remainingEl.innerText = remainingString;
+
+      var date = new Date();
+      document.getElementById(
+        'last-updated'
+      ).innerText = date.toLocaleTimeString();
+
+if (isEnglish) {
+      document.getElementById('ch-only-1').innerText = '';
+      document.getElementById('ch-only-2').innerText = '';
+      document.getElementById('en-1').innerText = 'Please prepare your NHI card and the ID card No./UI No. printed on the NHI card.';
+      document.getElementById('en-2').innerText = 'This page will refresh automatically. Last update:\xA0';
+}
+    </script>
+</html>
