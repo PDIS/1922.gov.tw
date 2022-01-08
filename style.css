@@ -5,126 +5,57 @@
 }
 
 #app {
-  /* border: 1px solid #000; */
   width: 100%;
-  min-height: 100vh;
-  /* background-color: #222; */
+  background-color: #F0F0F0;
 }
 
-.content {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-.left-side {
-  width: 30%;
-  min-height: 100vh;
-  background-color: #fff;
-  display: none
-}
-
-.right-side {
-  width: 70%;
-  height: 100%;
-  /* background-color: #6dffe7; */
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.left-side .cover {
-  width: 100%;
-  height: 80vh;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.left-side .title {
-  width: 100%;
-  height: 20vh;
-  background-color: #00b585;
-  display: flex;
-  justify-content: center;
-  /* align-items: flex-start; */
-  align-items: center;
-  /* padding: 1rem 0; */
-}
-
-.left-side .title a {
-  color: white;
-  text-align: center;
-  font-size: 1.2rem;
-  width: 70%;
-  text-decoration: none;
-}
-
-.left-side .title a img {
-  /* width: 100%; */
-  mix-blend-mode: multiply
-}
-
-section {
-  /* border: 1px solid #000; */
-  
-  width: 50vw;
-  /* margin-bottom: 2.2rem; */
-}
-
-section h1 {
+h1 {
   margin-bottom: 1rem;
-  /* color: #fff; */
+  font-size: 2rem;
   color: #00b585;
   font-weight: 900;
 }
 
-section p {
-  /* color: #fff; */
-  font-size: 1.4rem;
-  padding: 0 2rem;
+hr {
+  border-top: 2px solid #00b585;
+  margin: 1.5rem 0;
 }
-section a {
+
+a {
   color: #00b585;
   font-weight: 900;
   text-decoration: none;
 }
 
-.right-side span {
-  width: 50vw;
-  height: 1px;
-  background-color: #00b585;
-  /* border: 1px solid #000; */
-  margin: 1rem 0;
+.navbar, footer {
+  background-color: black;
 }
 
+.navbar-brand span {
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 60px;
+}
 
-@media screen and (max-width: 1024px) {
-  .left-side {
-    display: none;
-  }
-  .right-side, section {
-    width: 100vw;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-  }
-  .right-side {
-    padding: 1rem;
-  }
-  .right-side h1 {
-    font-size: 1rem;
+.info {
+  padding: 5rem 3rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 3px 3px 10px 0 rgb(0 0 0 / 20%);
+  background-color: white;
+}
+
+@media screen and (max-width: 992px) {
+  h1 {
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
-  .right-side p {
-    font-size: 1rem;
+
+  .navbar-brand span {
+    font-size: 1.25rem;
   }
-  .right-side span {
-    width: 80vw;
+
+  .info {
+    padding: 1rem;
   }
 }
