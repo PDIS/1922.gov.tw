@@ -7,13 +7,13 @@
 #app {
   /* border: 1px solid #000; */
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   /* background-color: #222; */
 }
 
 .content {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +22,7 @@
 
 .left-side {
   width: 30%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #fff;
   display: none
 }
