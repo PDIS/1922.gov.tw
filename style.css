@@ -7,6 +7,7 @@
 #app {
   width: 100%;
   background-color: #F0F0F0;
+  height: 100vh;
 }
 
 h1 {
@@ -43,6 +44,10 @@ a {
   text-align: center;
   box-shadow: 3px 3px 10px 0 rgb(0 0 0 / 20%);
   background-color: white;
+}
+
+div p:last-child {
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 992px) {
