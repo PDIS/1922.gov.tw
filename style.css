@@ -13,17 +13,17 @@
 h1 {
   margin-bottom: 1rem;
   font-size: 2rem;
-  color: #00b585;
+  color: #008762;
   font-weight: 900;
 }
 
 hr {
-  border-top: 2px solid #00b585;
+  border-top: 2px solid #008762;
   margin: 1.5rem 0;
 }
 
 a {
-  color: #00b585;
+  color: #008762;
   font-weight: 900;
   text-decoration: none;
 }
